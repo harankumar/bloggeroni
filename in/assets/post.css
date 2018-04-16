@@ -1,6 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     padding: 0% 10%;
+    font-size: 21px;
+}
+
+
+h1 {
+    font-size: 42px;
 }
 
 #top {

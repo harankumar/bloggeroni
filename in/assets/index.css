@@ -6,15 +6,21 @@ body {
 #top {
     padding-bottom: 0%;
     text-align: center;
-    font-size: 120%;
+    font-size: 30px;
+}
+
+h1 {
+    font-size: 42px;
 }
 
 h2 {
     color: #222;
+    font-size: 25px;
 }
 
 h3 {
     font-weight: normal;
+    font-size: 21px;
 }
 
 .post {
