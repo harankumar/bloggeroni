@@ -32,7 +32,7 @@ for (let post of metadata["posts"]) {
     post["body"] = marky(postSrc)
     const postHtml = postTemplate(post)
 
-    fs.writeFileSync("./out/" + post["id"] + ".html", postHtml)
+    fs.writeFileSync("./out/posts/" + post["id"] + ".html", postHtml)
 }
 
 
@@ -54,5 +54,5 @@ for (let tag of Array.from(tags)) {
 
     const tagHtml = homepageTemplate(_metadata)
 
-    fs.writeFileSync("./out/" + tag + ".html", tagHtml)
+    fs.writeFileSync("./out/tags/" + tag + ".html", tagHtml)
 }
