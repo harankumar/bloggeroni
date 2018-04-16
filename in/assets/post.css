@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    padding: 0% 10%;
+}
+
+#top {
+    padding: 5% 20%;
+    text-align: center;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+article {
+    padding: 5% 0%;
+    color: #333;
+    display: block;
+}

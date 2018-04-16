@@ -1,0 +1,20 @@
+{
+  "name": "Haran Kumar",
+  "description": "Student, Developer, Traveler",
+  "posts": [
+    {
+      "title": "My Second Post",
+      "subtitle": "They say the sequel is always better than the original",
+      "date": "January 12, 2018",
+      "body_src": "posts/post2.md",
+      "id": "post2"
+    },
+    {
+      "title": "My First Post",
+      "subtitle": "The OG",
+      "date": "August 17, 2017",
+      "body_src": "posts/post1.md",
+      "id": "post1"
+    }
+  ]
+}
