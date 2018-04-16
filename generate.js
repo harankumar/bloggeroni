@@ -10,9 +10,9 @@ const metadata = JSON.parse(fs.readFileSync("./in/index.json"))
 const posts = metadata["posts"]
 
 // Copy over assets
-// ncp("./in/assets", "./out/assets", (e) => {
-//     if (e) console.log(e)
-// })
+ncp("./in/assets", "./out/assets", (e) => {
+    if (e) console.log(e)
+})
 
 // Make index.html
 const homepageSrc = fs.readFileSync("./in/templates/index.hbs").toString()
