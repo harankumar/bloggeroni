@@ -1,10 +1,10 @@
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     padding: 0% 10%;
 }
 
 #top {
-    padding: 5% 20%;
+    padding: 5% 20% 2%;
     text-align: center;
 }
 
@@ -13,7 +13,7 @@ h2 {
 }
 
 article {
-    padding: 5% 0%;
+    padding: 2% 0 5%;
     color: #333;
     display: block;
 }
