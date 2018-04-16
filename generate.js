@@ -4,17 +4,20 @@ const ncp = require('ncp').ncp
 const marky = require('marky-markdown')
 
 
+handlebars.registerHelper("encodeURIComponent", encodeURIComponent)
+
 const metadata = JSON.parse(fs.readFileSync("./in/index.json"))
 const posts = metadata["posts"]
 
 // Copy over assets
-ncp("./in/assets", "./out/assets", (e) => {
-    if (e) console.log(e)
-})
+// ncp("./in/assets", "./out/assets", (e) => {
+//     if (e) console.log(e)
+// })
 
 // Make index.html
 const homepageSrc = fs.readFileSync("./in/templates/index.hbs").toString()
-const homepageHtml = handlebars.compile(homepageSrc)(metadata)
+const homepageTemplate = handlebars.compile(homepageSrc)
+const homepageHtml = homepageTemplate(metadata)
 
 fs.writeFileSync("./out/index.html", homepageHtml)
 
@@ -33,4 +36,23 @@ for (let post of metadata["posts"]) {
 }
 
 
-// TODO: TAGS
+const tags = new Set()
+for (let post of metadata["posts"]) {
+    for (let tag of post["tags"]) {
+        tags.add(tag)
+    }
+}
+
+for (let tag of Array.from(tags)) {
+    const _metadata = {}
+
+    _metadata["name"] = tag
+    _metadata["description"] = `Posts tagged with "${tag}."`
+
+    _metadata["posts"] = metadata["posts"]
+        .filter((post) => post["tags"].indexOf(tag) !== -1)
+
+    const tagHtml = homepageTemplate(_metadata)
+
+    fs.writeFileSync("./out/" + tag + ".html", tagHtml)
+}

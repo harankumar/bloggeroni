@@ -18,11 +18,20 @@
         {{#unless @first}}
             <hr>
         {{/unless}}
-        <a class="post" href="{{id}}.html">
-            <h2>{{title}}</h2>
-            <h3>{{subtitle}}</h3>
-            <i>{{date}}</i>
-        </a>
+        <div class="post">
+            <a href="{{id}}.html">
+                <h2>{{title}}</h2>
+                <h3>{{subtitle}}</h3>
+                <i>{{date}}</i>
+            </a>
+
+            {{#tags}}
+                <a class="tag"
+                   href="{{this}}.html">
+                    {{this}}
+                </a>
+            {{/tags}}
+        </div>
     {{/posts}}
 </div>
 

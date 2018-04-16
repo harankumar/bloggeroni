@@ -7,14 +7,16 @@
       "subtitle": "They say the sequel is always better than the original",
       "date": "January 12, 2018",
       "body_src": "posts/post2.md",
-      "id": "post2"
+      "id": "post2",
+      "tags": ["a-tag", "another-tag", "posts"]
     },
     {
       "title": "My First Post",
       "subtitle": "The OG",
       "date": "August 17, 2017",
       "body_src": "posts/post1.md",
-      "id": "post1"
+      "id": "post1",
+      "tags": ["a-tag", "a-cool-tag", "posts"]
     }
   ]
 }
