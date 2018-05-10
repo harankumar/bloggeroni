@@ -29,7 +29,7 @@ const postTemplate = handlebars.compile(
 for (let post of metadata["posts"]) {
     const postSrc = fs.readFileSync("./in/" + post["body_src"])
         .toString()
-    post["homepage"] = metadata["name"]
+    post["name"] = metadata["name"]
     post["body"] = marky(postSrc)
     const postHtml = postTemplate(post)
 
