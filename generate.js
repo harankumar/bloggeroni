@@ -29,6 +29,7 @@ const postTemplate = handlebars.compile(
 for (let post of metadata["posts"]) {
     const postSrc = fs.readFileSync("./in/" + post["body_src"])
         .toString()
+    post["homepage"] = metadata["name"]
     post["body"] = marky(postSrc)
     const postHtml = postTemplate(post)
 
@@ -36,6 +37,7 @@ for (let post of metadata["posts"]) {
 }
 
 
+// Make [tag].html
 const tags = new Set()
 for (let post of metadata["posts"]) {
     for (let tag of post["tags"]) {

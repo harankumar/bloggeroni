@@ -18,6 +18,10 @@ h2 {
     font-weight: normal;
 }
 
+a {
+    text-decoration: none;
+}
+
 article {
     padding: 2% 20% 5%;
     color: #333;
